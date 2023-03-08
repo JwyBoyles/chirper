@@ -1,38 +1,663 @@
-.App {
-  text-align: center;
-}
+.App{
+  display: flex;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+}
+
+a:-webkit-any-link{
+  text-decoration: none;
+  color: black;
+}
+
+.signUpWindow--signUpScreen{
+  min-height: 100%;
+  position: fixed;
+  min-width: 100vw;
+  z-index: 3;
+  background-color:rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signUpWindow--signUpBox {
+  width: 30rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-evenly;
+  border-radius: 3rem/3rem;
+  position: relative;
+}
+
+.signUpWindow--closeWindow {
+  height: 3rem;
+  position: relative;
+  top: 2rem;
+}
+
+.signUpWindow--signUpBox img {
+  align-self: flex-end;
+}
+
+.signUpWindow--signUpText {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.signUpWindow--signUpForm{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.signUpWindow--signUpForm input{
+  height: 3rem;
+  width: 30rem;
+  margin-bottom: 1rem;
+}
+
+.signUpWindow--createAccountButton{
+  height: 3rem;
+  width: 30rem;
+  margin-bottom: 2rem;
+  align-self: center;
+  border-radius: 5rem/4rem;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+}
+
+.signUpWindow--createAccountButtonFilled{
+  height: 3rem;
+  width: 30rem;
+  margin-bottom: 2rem;
+  align-self: center;
+  border-radius: 5rem/4rem;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.signUpWindow--createAccountButtonFilled:hover{
+  background-color:  rgb(63, 61, 61);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.CreateUser--signUpScreen{
+  min-height: 100%;
+  position: fixed;
+  min-width: 100vw;
+  z-index: 3;
+  background-color:rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.CreateUser--signUpBox {
+  width: 30rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 3rem/3rem;
+  position: relative;
+}
+
+.CreateUser--closeWindow {
+  height: 3rem;
+  position: relative;
+  top: 2rem;
+}
+
+.CreateUser--signUpBox img {
+  align-self: flex-end;
+}
+
+.CreateUser--signUpText {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.CreateUser--signUpForm{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.CreateUser--signUpForm > input{
+  height: 3rem;
+  width: 30rem;
+  margin-bottom: 1rem;
+}
+
+.createUser--profilePic{
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.createUser--profilePic > label{
+  width: 10rem;
+}
+
+.createUser--uploadPic{
+  margin-left: 1rem;
+}
+
+.CreateUser--createAccountButton{
+  height: 3rem;
+  width: 30rem;
+  margin-bottom: 2rem;
+  align-self: center;
+  border-radius: 5rem/4rem;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+}
+
+.CreateUser--createAccountButtonFilled{
+  height: 3rem;
+  width: 30rem;
+  margin-bottom: 2rem;
+  align-self: center;
+  border-radius: 5rem/4rem;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  background-color: black;
+  color: white;
+}
+
+.CreateUser--createAccountButtonFilled:hover{
+  background-color: rgb(63, 61, 61);
+}
+
+.createUser--usernameCounter{
+  align-self: flex-end;
+  position: absolute;
+  top: 5.4rem;
+  font-size: 14px;
+  color: #979494;
+}
+
+.createUser--handleCounter{
+  align-self: flex-end;
+  position: absolute;
+  top: 9.8rem;
+  font-size: 14px;
+  color: #979494;
+}
+
+.createUser--userPic{
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5.2rem;
+  left: 9rem;
+}
+
+.app--newChirpScreen{
+  min-height: 100%;
+  position: fixed;
+  min-width: 100vw;
+  z-index: 3;
+  background-color:rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app--newChirpBox {
+  height: 15rem;
+  width: 50rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  border-radius: 3rem/3rem;
+  position: relative;
+}
+
+.app--newChirpProfilePic{
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+}
+
+.app--composeChirp{
+  border: none;
+  border-bottom: 1px solid #E4e4e4;
+  resize: none;
+  font-size: 24px;
+}
+
+.app--composeChirp:focus-visible{
+  outline: none;
+}
+
+
+.app--counter{
+  color: #979494;
+  font-size: 12px;
+  position: absolute;
+  left: 5rem;
+  bottom: 3.5rem;
+}
+
+
+.app--closeWindow{
+    height: 3rem;
+}
+
+.app--userInput{
+  align-self: flex-start;
+}
+
+.app--createChirpButton {
+  width: 17rem;
+  height: 4rem;
+  background-color: #E46301;;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5rem/4rem;
+  font-size: 36px;
+}
+
+.app--createChirpButton:hover {
+  background-color: #c75804;;
+}
+
+.Header {
+  padding-left: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  opacity: 95%;
+}
+
+.header--username {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 0;
+  margin-top: 1px;
+}
+
+.header--title {
+  font-weight: bold;
+  font-size: 18px;
+
+}
+
+.header--totalChirps {
+  color: #979494;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.Sidebar {
+  width: clamp(10vw, 33vw, 40vw);
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.sidebar--content{
+  position: sticky;
+  align-self: flex-end;
+  margin-right: 5rem;
+  top: 1rem;
+}
+
+.sidebar--logo {
+  height: 3rem;
+  width: 3rem;
+  margin-left: .5rem;
+}
+
+.sidebar--icon {
+  height: 25px;
+  width: 25px;
+  margin-right: 2rem;
+}
+
+.sidebar--text {
+  font-size: 23px;
+}
+
+.sidebar--list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 4rem/4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 1rem;
+}
+
+.sidebar--list:hover{
+  background-color: rgba(192, 189, 189, 0.596);
+}
+
+.Body {
+  width: clamp(30rem, 33vw, 90vw);
+  border-right: 1px solid #E4e4e4;
+  
+  border-left: 1px solid #E4e4e4;
+}
+
+.Bio{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #E4e4e4;
+}
+
+.bio--header{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.bio--bannerImage{
+  height: 13rem;
+  z-index: -1;
+}
+
+.bio--profileImage{
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  align-self: center;
+  position: absolute;
+  top: 8.5rem;
+  left: 1rem;
+  border: 3px solid white;
+}
+
+
+
+.bio--followButton{
+  align-self: center;
+  position: absolute;
+  top: 14rem;
+  right: 2rem;
+  width: 6rem;
+  height: 2rem;
+  font-size: 15px;
+  padding: 2px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5rem/5rem;
+}
+
+.bio--followButton:hover{
+  background-color: rgb(63, 61, 61);
+}
+
+.bio--doneButton{
+  align-self: flex-end;
+  width: 5rem;
+  height: 2rem;
+  font-size: 15px;
+  padding: 2px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5rem/5rem;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.bio--doneButton:hover{
+  background-color: rgb(63, 61, 61);
+}
+
+.bio--info{
+  margin-top: 4rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.bio--rechirpText{
+  color: #979494;
+  position: relative;
+  top: 1rem;
+  margin: 0;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.bio--updateBioField{
+  border: 1px solid #E4e4e4;;
+  
+  resize: none;
+}
+
+.bio--updateBioField:focus-visible{
+  outline: none;
+  border: none;
+}
+
+.bio--username {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+
+.bio--handle {
+  font-size: 16px;
+  margin-top: 1px;
+  color: #979494;
+}
+
+.bio--description {
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.bio--joinDate {
+  font-size: 16px;
+  color: #979494;
+  margin: 0;
+}
+
+.bio--followerCount {
+  font-size: 14px;
+  color: #979494;
+}
+
+
+.Feed {
+  display: flex;
+  flex-direction: column;
+}
+
+.feed--chirp {
+  display: flex;
+  border-top: 1px solid #E4e4e4;
+  padding: 1px;
+}
+
+.feed--header{
+  display: flex;
+  margin: 16px;
+}
+
+.feed--userPic {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+}
+
+.feed--chirpBody{
+  width: 100%;
+}
+
+.feed--user {
+  display: flex;
+  gap: .5rem;
+}
+
+.feed--userName {
+  margin-bottom: 4px;
+  font-weight: Bold;
+}
+
+.feed--userName:hover {
+  text-decoration: underline;
+}
+
+.feed--handle {
+  margin-bottom: 4px;
+  color: #979494;
+}
+
+.feed--icons {
+  display: flex;
+  min-width: 100%;
+  justify-content: space-around;
+}
+
+.feed--chirpContent{ 
+  margin: 0;
+  word-wrap: break-word;
+  max-width: 24vw;
+}
+
+.feed--iconGroup {
+  display: flex;
+  color: #979494;
+  height: 20px;
+  width: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1%;
+}
+
+.feed--iconGroup > p {
+  font-size: 18px;
+  margin-left: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.SignUp {
+  width: clamp(10%, 33vw, 35vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signUp--userPicContainer{
+  align-self: flex-start;
+  margin-left: 3rem;
+  position: sticky;
+  top: 1rem;
+}
+
+.signUp--userPic{
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+}
+
+.signUp--box{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #E4e4e4;
+  margin-top: 3rem;
+  margin-left: 3rem;
+  align-self: flex-start;
+  padding: 1rem;
+  height: 18rem;
+  width: 15rem;
+  border-radius: 1rem/1rem;
+  position: sticky;
+  top: 3rem;
+}
+
+.signUp--bold{
+  font-size: 32px;
+  font-weight: bold;
+  margin: 1px;
+}
+
+.signUp--button{
+  width: 14rem;
+  height: 3rem;
+  margin-top: 1rem;
+  border-radius: 5rem/5rem;
+  font-weight: bold;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 15px;
+  align-self: center;
+  border: 1px solid #E4e4e4;
+  background-color: white;
+}
+
+.signUp--button:hover{
+  background-color: rgba(192, 189, 189, 0.596);
+}
+
+.signUp--chirpButton{
+  width: min(15rem, 100%);
+  height: 4rem;
+  background-color: #E46301;;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5rem/4rem;
+  font-size: 36px;
+  position: sticky;
+  top: 21rem;
+  align-self: flex-end;
+  margin-right: 3rem;
+}
+
+.signUp--chirpButton:hover{
+  background-color: #c75804;
+}
+
+.Settings{
+  display: flex;
+  flex-direction: column;
+}
+
+.settings--signOutButton{
+  height: 3rem;
+  width: 15rem;
+  margin-left: 2rem;
+  align-self: center;
+  border-radius: 5rem/4rem;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  background-color: black;
+  color: white;
+}
+
+.settings--signOutButton:hover{
+  background-color:  rgb(63, 61, 61);
+}
+
